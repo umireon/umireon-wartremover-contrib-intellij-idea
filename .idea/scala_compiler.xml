@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="umireon-wartremover-contrib-intellij-idea" />
+    <profile name="sbt 1" modules="umireon-wartremover-contrib-intellij-idea">
+      <parameters>
+        <parameter value="-P:wartremover:traverser:org.wartremover.contrib.warts.Apply" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/wartremover-contrib_2.13.6-2.0.0.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/scala-library-2.13.6.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/wartremover_2.13.6-3.0.0.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/scala-compiler-2.13.6.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/scala-reflect-2.13.6.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/jline-3.19.0.jar" />
+        <parameter value="-P:wartremover:cp:file:target/compiler_plugins/jna-5.3.1.jar" />
+        <parameter value="-Xfatal-warnings" />
+      </parameters>
+      <plugins>
+        <plugin path="$PROJECT_DIR$/target/compiler_plugins/wartremover_2.13.6-3.0.5.jar" />
+      </plugins>
+    </profile>
   </component>
 </project>
